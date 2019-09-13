@@ -20,7 +20,8 @@ pip install -U wxpy
 功能：
 + 查询实时天气
 + 查询地区温度
-+ 查询天气预报
++ 查询天气预报  
+
 **2 使用rasa训练数据**
 ```python
 # Import necessary modules
