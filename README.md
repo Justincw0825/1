@@ -17,70 +17,10 @@ pip install -U wxpy
 ## Core Method	
 **1 天气数据查询API**  
 [Open Weather Map](https://rapidapi.com/community/api/open-weather-map/endpoints)  
+功能：
 + 查询实时天气
-```python
-#define the current_weather to get the data about weather from certain website
-def current_weather(city):
-		url = "https://community-open-weather-map.p.rapidapi.com/weather"
-
-		querystring = {"callback":"test","id":"2172797","units":"\"metric\" or \"imperial\"","mode":"xml, html","q":"London,uk"}
-		querystring['q'] = city
-
-		headers = {
-				'x-rapidapi-host': "community-open-weather-map.p.rapidapi.com",
-				'x-rapidapi-key': "84db939702msh3255af9f5bf635dp177c06jsn84d6de59e9ba"
-				}
-
-		response = requests.request(",,,GET", url, headers=headers, params=querystring)
-		response1=response.text
-		s=response1[4:]
-		b=eval(s)
-
-		return [b['name'],b['weather'][0]['description'],b['wind']['speed']]
-```
 + 查询地区温度
-```python
-#define the temperature_search to get the data about weather from certain website
-def temperature_search(city):
-		url = "https://community-open-weather-map.p.rapidapi.com/weather"
-
-		querystring = {"callback":"test","id":"2172797","units":"\"metric\" or \"imperial\"","mode":"xml, html","q":"London,uk"}
-		querystring['q'] = city
-
-		headers = {
-				'x-rapidapi-host': "community-open-weather-map.p.rapidapi.com",
-				'x-rapidapi-key': "84db939702msh3255af9f5bf635dp177c06jsn84d6de59e9ba"
-				}
-
-		response = requests.request("GET", url, headers=headers, params=querystring)
-		response1=response.text
-		s=response1[4:]
-		b=eval(s)
-
-		return [b['name'],"%.2f"%(b['main']['temp_max']-273.15),"%.2f"%(b['main']['temp_min']-273.15),"%.2f"%(b['main']['temp']-273.15)]
-```
 + 查询天气预报
-```python
-#define the weather_forecast to get the data about weather from certain website
-def weather_forecast(city):
-    url = "https://community-open-weather-map.p.rapidapi.com/forecast"
-
-    querystring = {"q":"london,uk"}
-    querystring['q'] = city
-
-    headers = {
-        'x-rapidapi-host': "community-open-weather-map.p.rapidapi.com",
-        'x-rapidapi-key': "84db939702msh3255af9f5bf635dp177c06jsn84d6de59e9ba"
-        }
-
-    response = requests.request("GET", url, headers=headers, params=querystring)
-    response1=response.text
-    b=eval(response1)
-		
-    for i in b['list'][4:10]:
-        str="The weather in {} at {} is mainly {}".format(b['city']['name'],i['dt_txt'],i['weather'][0]['description'])
-        print("BOT:{}".format(str))
-```
 ```python
 def forecast(city):
     m = weather_forecast(city)
