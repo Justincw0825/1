@@ -4,7 +4,7 @@
 ```
 pip install requests
 ```
-+ `rasa`, `spacy` 用于自然语言处理和命名实体识别
++ `rasa`, `spacy` 用于自然语言处理和命名实体识别  
 [rasa安装](https://rasa.com/docs/rasa/user-guide/installation/)  
 [spacy安装](https://spacy.io/usage)  
 **要注意版本问题否则不能兼容**
