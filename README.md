@@ -1,8 +1,7 @@
 # 与微信集成的天气查询会话机器人
 ## 需要安装以下python包
 + requests，用于爬取天气相关的数据
-```pip
-#requests安装
+```
 pip install requests
 ```
 + rasa, spacy 用于nlp, ner  
@@ -11,7 +10,6 @@ pip install requests
 **要注意版本问题否则不能兼容**
 + wxpy 用于在微信上的交互对话
 ```
-#wxpy安装
 pip install -U wxpy
 ```
 ## 如何初始化机器人并且实现消息处理
