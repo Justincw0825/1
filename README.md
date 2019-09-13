@@ -9,7 +9,7 @@
 + 天气数据查询API  
 [Open Weather Map](https://rapidapi.com/community/api/open-weather-map/endpoints)  
 1.查询实时天气
-```
+```python
 def current_weather(city):
 		url = "https://community-open-weather-map.p.rapidapi.com/weather"
 
@@ -29,7 +29,7 @@ def current_weather(city):
 		return [b['name'],b['weather'][0]['description'],b['wind']['speed']]
 ```
 2.查询地区温度
-```
+```python
 def temperature_search(city):
 		url = "https://community-open-weather-map.p.rapidapi.com/weather"
 
@@ -49,7 +49,7 @@ def temperature_search(city):
 		return [b['name'],"%.2f"%(b['main']['temp_max']-273.15),"%.2f"%(b['main']['temp_min']-273.15),"%.2f"%(b['main']['temp']-273.15)]
 ```
 3.查询天气预报
-```
+```python
 def weather_forecast(city):
     url = "https://community-open-weather-map.p.rapidapi.com/forecast"
 
@@ -69,7 +69,7 @@ def weather_forecast(city):
         str="The weather in {} at {} is mainly {}".format(b['city']['name'],i['dt_txt'],i['weather'][0]['description'])
         print("BOT:{}".format(str))
 ```
-```
+```python
 def forecast(city):
     m = weather_forecast(city)
 		
