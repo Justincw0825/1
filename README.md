@@ -1,14 +1,14 @@
 # 与微信集成的天气查询会话机器人
 ## 需要安装以下python包
-+ requests，用于爬取天气相关的数据
++ `requests`，用于爬取天气相关的数据
 ```
 pip install requests
 ```
-+ rasa, spacy 用于nlp, ner  
++ `rasa`, `spacy` 用于nlp, ner  
 [rasa安装](https://rasa.com/docs/rasa/user-guide/installation/)  
 [spacy安装](https://spacy.io/usage)  
 **要注意版本问题否则不能兼容**
-+ wxpy 用于在微信上的交互对话
++ `wxpy` 用于在微信上的交互对话
 ```
 pip install -U wxpy
 ```
@@ -209,6 +209,6 @@ def send_message(state, pending, message,answer):
 ```
 **6 运行wechat bot**  
 -用一个帐号登录wechat bot作为机器人  
--给一名用户授权可以激活机器人  
-在python comandline上运行该文档  
+-用编译器打开文档Weather_chatbot.ipynb  
+-给一名用户授权，*将###改成该用户的昵称*  
 -进行多轮对话  
