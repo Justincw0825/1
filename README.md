@@ -10,6 +10,7 @@
 [Open Weather Map](https://rapidapi.com/community/api/open-weather-map/endpoints)  
 + 查询实时天气
 ```python
+#define the current_weather to get the data about weather from certain website
 def current_weather(city):
 		url = "https://community-open-weather-map.p.rapidapi.com/weather"
 
@@ -30,6 +31,7 @@ def current_weather(city):
 ```
 + 查询地区温度
 ```python
+#define the temperature_search to get the data about weather from certain website
 def temperature_search(city):
 		url = "https://community-open-weather-map.p.rapidapi.com/weather"
 
@@ -50,6 +52,7 @@ def temperature_search(city):
 ```
 + 查询天气预报
 ```python
+#define the weather_forecast to get the data about weather from certain website
 def weather_forecast(city):
     url = "https://community-open-weather-map.p.rapidapi.com/forecast"
 
