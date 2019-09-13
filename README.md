@@ -210,5 +210,5 @@ def send_message(state, pending, message,answer):
 **6 运行wechat bot**  
 -用一个帐号登录wechat bot作为机器人  
 -用编译器打开文档Weather_chatbot.ipynb  
--给一名用户授权，*将###改成该用户的昵称*  
+-给一名用户授权  *即将###改成该用户的昵称*  
 -进行多轮对话  
