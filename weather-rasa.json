@@ -1,0 +1,657 @@
+{
+  "rasa_nlu_data": {
+    "regex_features": [
+      {
+        "name": "zipcode",
+        "pattern": "[0-9]{5}"
+      },
+      {
+        "name": "greet",
+        "pattern": "hey[^\\s]*"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "weather",
+        "synonyms": ["Weather", "wether", "weatherr"]
+      },
+      {
+        "value": "hot",
+        "synonyms": ["warm","high temperature"]
+      },
+      {
+        "value": "cool",
+        "synonyms": ["cold","low temperature"]
+      }
+    ],
+    "common_examples": [
+      {
+        "text": "hey", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "howdy", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hey there",
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hello", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hi", 
+        "intent": "greet", 
+        "entities": []
+      },
+      {
+        "text": "good morning",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "good evening",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "yes", 
+        "intent": "affirm", 
+        "entities": []
+      }, 
+      {
+        "text": "yep", 
+        "intent": "affirm", 
+        "entities": []
+      }, 
+      {
+        "text": "yeah", 
+        "intent": "affirm", 
+        "entities": []
+      },
+      {
+        "text": "indeed",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "that's right",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "ok",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "great",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "right, thank you",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "sounds really good",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "weather", 
+        "intent": "service_require", 
+        "entities": []
+      }, 
+      {
+        "text": "temperature", 
+        "intent": "service_require", 
+        "entities": []
+      }, 
+      {
+        "text": "how can I use you",
+        "intent": "ask_usage", 
+        "entities": []
+      }, 
+      {
+        "text": "who are you?", 
+        "intent": "ask_explanation", 
+        "entities": []
+      }, 
+      {
+        "text": "What can you do for me?", 
+        "intent": "ask_explanation", 
+        "entities": []
+      }, 
+      {
+        "text": "what is your function?", 
+        "intent": "ask_explanation", 
+        "entities": []
+      },
+      {
+        "text": "what can you do for me",
+        "intent": "ask_explanation",
+        "entities": []
+      },
+      {
+        "text": "what is your usage",
+        "intent": "ask_usage",
+        "entities": []
+      },
+      {
+        "text": "what's your usage",
+        "intent": "ask_usage",
+        "entities": []
+      },
+      {
+        "text": "how can I use you?",
+        "intent": "ask_usage",
+        "entities": []
+      },
+      {
+        "text": "I want to search the weather",
+        "intent": "service_require",
+        "entities": []
+      },
+      {
+        "text": "I want to search the temperature", 
+        "intent": "service_require", 
+        "entities": []
+      }, 
+      {
+        "text": "how can I ask question?", 
+        "intent": "ask_usage", 
+        "entities": []
+      },
+      {
+        "text": "Can you help me search the weather?", 
+        "intent": "service_require", 
+        "entities": []
+      }, 
+      {
+        "text": "wuhan's weather", 
+        "intent": "current_weather", 
+        "entities": [ {
+            "start": 0,
+            "end": 5,
+            "value": "wuhan",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "guangzhou's weather", 
+        "intent": "current_weather", 
+        "entities": [ {
+            "start": 0,
+            "end": 9,
+            "value": "guangzhou",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "I want to know guangzhou's weather.", 
+        "intent": "current_weather", 
+        "entities": [ {
+            "start": 15,
+            "end": 24,
+            "value": "guangzhou",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "I want to know wuhan's weather.", 
+        "intent": "current_weather", 
+        "entities": [ {
+            "start": 15,
+            "end": 20,
+            "value": "wuhan",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "I want to know wuhan's current weather.", 
+        "intent": "current_weather", 
+        "entities": [ {
+            "start": 15,
+            "end": 20,
+            "value": "wuhan",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "I want to know guangzhou's current weather.", 
+        "intent": "current_weather", 
+        "entities": [ {
+            "start": 15,
+            "end": 24,
+            "value": "guangzhou",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "guangzhou's temperature", 
+        "intent": "temperature_search", 
+        "entities": [ {
+            "start": 0,
+            "end": 9,
+            "value": "guangzhou",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "wuhan's temperature", 
+        "intent": "temperature_search", 
+        "entities": [ {
+            "start": 0,
+            "end": 5,
+            "value": "wuhan",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "I want to know wuhan's temperature", 
+        "intent": "temperature_search", 
+        "entities": [ {
+            "start": 15,
+            "end": 20,
+            "value": "wuhan",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "I want to know guanhzhou's temperature", 
+        "intent": "current_weather", 
+        "entities": [ {
+            "start": 15,
+            "end": 24,
+            "value": "guangzhou",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "Is it hot in guangzhou?", 
+        "intent": "temperature_search", 
+        "entities": [ {
+            "start": 13,
+            "end": 22,
+            "value": "guangzhou",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "Is it cold in guangzhou?", 
+        "intent": "temperature_search", 
+        "entities": [ {
+            "start": 14,
+            "end": 23,
+            "value": "guangzhou",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "Is it cold in wuhan?", 
+        "intent": "temperature_search", 
+        "entities": [ {
+            "start": 14,
+            "end": 19,
+            "value": "wuhan",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "Is it hot in wuhan?", 
+        "intent": "temperature_search", 
+        "entities": [ {
+            "start": 13,
+            "end": 18,
+            "value": "wuhan",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "How is the weather in wuhan", 
+        "intent": "current_weather", 
+        "entities": [ {
+            "start": 22,
+            "end": 27,
+            "value": "wuhan",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "How is the weather in guangzhou", 
+        "intent": "current_weather", 
+        "entities": [ {
+            "start": 22,
+            "end": 31,
+            "value": "guangzhou",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "what is the weather like in guangzhou", 
+        "intent": "current_weather", 
+        "entities": [ {
+            "start": 28,
+            "end": 37,
+            "value": "guangzhou",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "what is the weather like in wuhan", 
+        "intent": "current_weather", 
+        "entities": [ {
+            "start": 28,
+            "end": 32,
+            "value": "guangzhou",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "show me the weather in wuhan", 
+        "intent": "current_weather", 
+        "entities": [ {
+            "start": 23,
+            "end": 28,
+            "value": "wuhan",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "show me the weather in guangzhou", 
+        "intent": "current_weather", 
+        "entities": [ {
+            "start": 23,
+            "end": 32,
+            "value": "guangzhou",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "show me the temperature in wuhan", 
+        "intent": "temperature_search", 
+        "entities": [ {
+            "start": 27,
+            "end": 32,
+            "value": "wuhan",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "show me the temperature in guangzhou", 
+        "intent": "temperature_search", 
+        "entities": [ {
+            "start": 27,
+            "end": 36,
+            "value": "guangzhou",
+            "entity": "city"
+          }]
+      },
+      {
+        "text": "weather forecast",
+        "intent": "service_require",
+        "entities": []
+      },
+      {
+        "text": "search weather",
+        "intent": "service_require",
+        "entities": []
+      },
+      {
+        "text": "tell me about the weather in wuhan tomorrow.",
+        "intent": "weather_forecast",
+        "entities": [
+          {
+            "start": 28,
+            "end": 33,
+            "value": "wuhan",
+            "entity": "city"
+          },
+          {
+            "start": 34,
+            "end": 42,
+            "value": "tomorrow",
+            "entity": "time"
+          }
+        ]
+      },
+      {
+        "text": "tell me about the weather in guangzhou tomorrow.",
+        "intent": "weather_forecast",
+        "entities": [
+          {
+            "start": 28,
+            "end": 37,
+            "value": "guangzhou",
+            "entity": "city"
+          },
+          {
+            "start": 38,
+            "end": 46,
+            "value": "tomorrow",
+            "entity": "time"
+          }
+        ]
+      },
+      {
+        "text": "what is the weather like in guangzhou tomorrow?",
+        "intent": "weather_forecast",
+        "entities": [
+          {
+            "start": 28,
+            "end": 37,
+            "value": "guangzhou",
+            "entity": "city"
+          },
+          {
+            "start": 38,
+            "end": 46,
+            "value": "tomorrow",
+            "entity": "time"
+          }
+        ]
+      },
+      {
+        "text": "what is the weather like in wuhan tomorrow?",
+        "intent": "weather_forecast",
+        "entities": [
+          {
+            "start": 28,
+            "end": 33,
+            "value": "wuhan",
+            "entity": "city"
+          },
+          {
+            "start": 34,
+            "end": 42,
+            "value": "tomorrow",
+            "entity": "time"
+          }
+        ]
+      },
+      {
+        "text": "how is the weather in wuhan tomorrow?",
+        "intent": "weather_forecast",
+        "entities": [
+          {
+            "start": 22,
+            "end": 27,
+            "value": "wuhan",
+            "entity": "city"
+          },
+          {
+            "start": 28,
+            "end": 36,
+            "value": "tomorrow",
+            "entity": "time"
+          }
+        ]
+      },
+      {
+        "text": "how is the weather in guangzhou tomorrow?",
+        "intent": "weather_forecast",
+        "entities": [
+          {
+            "start": 22,
+            "end": 31,
+            "value": "guangzhou",
+            "entity": "city"
+          },
+          {
+            "start": 32,
+            "end": 40,
+            "value": "tomorrow",
+            "entity": "time"
+          }
+        ]
+      },
+      {
+        "text": "I am searching for wuhan's weather forecast.",
+        "intent": "weather_forecast",
+        "entities": [
+          {
+            "start": 19,
+            "end": 24,
+            "value": "wuhan",
+            "entity": "city"
+          }
+        ]
+      },
+      {
+        "text": "what about wuhan's weather tomorrow",
+        "intent": "weather_forecast",
+        "entities": [
+          {
+            "start": 11,
+            "end": 16,
+            "value": "wuhan",
+            "entity": "city"
+          },
+          {
+            "start": 26,
+            "end": 34,
+            "value": "tomorrow",
+            "entity": "time"
+          }
+        ]
+      },
+      {
+        "text": "what about wuhan's weather",
+        "intent": "weather_forecast",
+        "entities": [
+          {
+            "start": 11,
+            "end": 16,
+            "value": "wuhan",
+            "entity": "city"
+          }
+        ]
+      },
+      {
+	"text": "what about guangzhou's weather tomorrow",
+        "intent": "weather_forecast",
+        "entities": [
+          {
+            "start": 11,
+            "end": 20,
+            "value": "guangzhou",
+            "entity": "city"
+          },
+          {
+            "start": 30,
+            "end": 38,
+            "value": "tomorrow",
+            "entity": "time"
+          }
+        ]
+      },
+      {
+        "text": "what about guangzhou's weather",
+        "intent": "weather_forecast",
+        "entities": [
+          {
+            "start": 11,
+            "end": 20,
+            "value": "guangzhou",
+            "entity": "city"
+          }
+        ]
+      },
+      {
+        "text": "I am searching for guangzhou's weather forecast.",
+        "intent": "weather_forecast",
+        "entities": [
+          {
+            "start": 19,
+            "end": 28,
+            "value": "guangzhou",
+            "entity": "city"
+          }
+        ]
+      },
+      {
+        "text": "bye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "goodbye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "good bye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "stop", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "end", 
+        "intent": "goodbye", 
+        "entities": []
+      },
+      {
+        "text": "farewell",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "Bye bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "have a good one",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "What kind of girl do you like",
+        "intent": "none",
+        "entities": []
+      },
+      {
+        "text": "Tell me your girlfriend's name",
+        "intent": "none",
+        "entities": []
+      },
+      {
+        "text": "Tell me your girlfriend's name",
+        "intent": "none",
+        "entities": []
+      }
+    ]
+  }
+}
