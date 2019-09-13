@@ -646,11 +646,6 @@
         "text": "Tell me your girlfriend's name",
         "intent": "none",
         "entities": []
-      },
-      {
-        "text": "Tell me your girlfriend's name",
-        "intent": "none",
-        "entities": []
       }
     ]
   }
