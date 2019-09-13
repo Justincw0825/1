@@ -7,7 +7,7 @@ pip install requests
 + rasa, spacy 用于nlp, ner  
 [rasa安装](https://rasa.com/docs/rasa/user-guide/installation/)  
 [spacy安装](https://spacy.io/usage)  
-***要注意版本问题否则不能兼容***
+*要注意版本问题否则不能兼容*
 + wxpy 用于在微信上的交互对话
 ```
 pip install -U wxpy
