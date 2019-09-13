@@ -3,6 +3,9 @@
 + requests，用于爬取天气相关的数据
 + rasa, spacy 用于nlp, ner
 + wxpy 用于在微信上的交互对话
+```
+pip install -U wxpy
+```
 ## 如何初始化机器人并且实现消息处理
 [wxpy: 用 Python 玩微信](https://wxpy.readthedocs.io/zh/latest/)
 ## Core Method	
