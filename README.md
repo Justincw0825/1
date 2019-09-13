@@ -1,6 +1,6 @@
 # 与微信集成的天气查询会话机器人
 ## 需要安装以下python包
-+ `requests`，用于爬取天气相关的数据
++ `requests`用于爬取天气相关的数据
 ```
 pip install requests
 ```
