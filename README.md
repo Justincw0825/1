@@ -20,15 +20,7 @@ pip install -U wxpy
 功能：
 + 查询实时天气
 + 查询地区温度
-+ 查询天气预报
-```python
-def forecast(city):
-    m = weather_forecast(city)
-		
-    for i in m['list'][4:10]:
-        str="The weather in {} at {} is mainly {}".format(m['city']['name'],i['dt_txt'],i['weather'][0]['description'])
-        print("BOT:{}".format(str))
-```
++ 查询天气预报  
 **2 使用rasa训练数据**
 ```python
 # Import necessary modules
