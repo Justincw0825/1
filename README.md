@@ -107,16 +107,16 @@ state = INIT
 pending = None
 import random
 # Define send_message()
-def send_message(state, pending, message,answer):
+def send_message(state, pending, message, answer, record):
+    
     print("USER : {}".format(message))
     response = chitchat_response(message)
     if response is not None:
         answer=response
-        print(answer)
-        return state, None, answer
-    
+        return state, None, answer, record
     # Calculate the new_state, response, and pending_state
     new_state, response, pending_state = random.choice(policy_rules[(state, interpret(message))])
+    
     if interpret(message) == 'current_weather':
         city=interpreter.parse(message)['entities'][0]['value']
         (a,b,c)=(current_weather(city)[0],current_weather(city)[1],current_weather(city)[2])
@@ -133,12 +133,24 @@ def send_message(state, pending, message,answer):
     
     if pending is not None and new_state == pending[0]:
         new_state, response, pending_state = random.choice(policy_rules[pending])
-        answer=response    
-        print(answer) 
+        if pending[1] == 'current_weather':
+            city=interpreter.parse(record)['entities'][0]['value']
+            (a,b,c)=(current_weather(city)[0],current_weather(city)[1],current_weather(city)[2])
+            answer=response.format(a,b,c)
+        elif pending[1] == 'weather_forecast':
+            city=interpreter.parse(record)['entities'][0]['value']
+            answer=weather_forecast(city)
+        elif pending[1] == 'temperature_search':
+            city=interpreter.parse(record)['entities'][0]['value']
+            (a,b,c,d)=(temperature_search(city)[0],temperature_search(city)[1],temperature_search(city)[2],temperature_search(city)[3])
+            answer=response.format(a,b,c,d)
+        else:
+            answer=response
+
     if pending_state is not None:
         pending = (pending_state, interpret(message))
-    print(answer)
-    return new_state, pending, answer
+        record = message
+    return new_state, pending, answer, record
 ```
 **6 运行wechat bot**  
 -用一个帐号登录wechat bot作为机器人  
