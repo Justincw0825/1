@@ -167,5 +167,4 @@ class StateMachine(object):
 -给一名用户授权  *即将###改成该用户的昵称*  
 -进行多轮对话  
 ## Demo-GIF 
-<iframe height=624 width=1080 src="E:\FFOutput\前端视频part1">
-<iframe height=624 width=1080 src="E:\FFOutput\前端视频part2">
+![gif](E:\FFOutput\前端视频gif part2)
