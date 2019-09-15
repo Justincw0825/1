@@ -166,6 +166,6 @@ class StateMachine(object):
 -用编译器打开文档Weather_chatbot.ipynb  
 -给一名用户授权  *即将###改成该用户的昵称*  
 -进行多轮对话  
-## DEMO-GIF 
-<iframe height=500 width=500 src="E:\FFOutput\前端视频part1">
-<iframe height=500 width=500 src="E:\FFOutput\前端视频part2">
+## Demo-GIF 
+<iframe height=624 width=1080 src="E:\FFOutput\前端视频part1">
+<iframe height=624 width=1080 src="E:\FFOutput\前端视频part2">
