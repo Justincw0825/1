@@ -152,7 +152,16 @@ def send_message(state, pending, message, answer, record):
         record = message
     return new_state, pending, answer, record
 ```
-**6 运行wechat bot**  
+**6 用于记忆上下文信息**  
+```python
+class StateMachine(object):
+    def __init__(self):
+        self.state = 0
+        self.record = None
+        self.pending = None
+        self.answer = 0
+```
+**7 运行wechat bot**  
 -用一个帐号登录wechat bot作为机器人  
 -用编译器打开文档Weather_chatbot.ipynb  
 -给一名用户授权  *即将###改成该用户的昵称*  
