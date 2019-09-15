@@ -169,4 +169,4 @@ class StateMachine(object):
 ## Demo-GIF 
 ![gif1](https://github.com/Justincw0825/WeatherChatBot/blob/master/前端视频gif%20part1.gif)  
 ![gif2](https://github.com/Justincw0825/WeatherChatBot/blob/master/前端视频gif%20part2.gif)  
-![gif3](https://github.com/Justincw0825/WeatherChatBot/blob/master/前端视频gif%20part3.gif)  
+![gif3](https://github.com/Justincw0825/WeatherChatBot/blob/master/前端视频part3.gif)  
