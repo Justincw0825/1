@@ -167,4 +167,5 @@ class StateMachine(object):
 -给一名用户授权  *即将###改成该用户的昵称*  
 -进行多轮对话  
 ## Demo-GIF 
+只截取了视频的前40s，为了清晰度放了个大一点的  
 ![gif1](https://github.com/Justincw0825/WeatherChatBot/blob/master/前端视频gif%20part1.gif)
