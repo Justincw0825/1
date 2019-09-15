@@ -167,6 +167,4 @@ class StateMachine(object):
 -给一名用户授权  *即将###改成该用户的昵称*  
 -进行多轮对话  
 ## Demo-GIF 
-![gif1](https://github.com/Justincw0825/WeatherChatBot/blob/master/前端视频gif%20part1.gif)  
-![gif2](https://github.com/Justincw0825/WeatherChatBot/blob/master/前端视频gif%20part2.gif)  
-![gif3](https://github.com/Justincw0825/WeatherChatBot/blob/master/前端视频part3.gif)  
+![gif1](https://github.com/Justincw0825/WeatherChatBot/blob/master/前端视频gif%20part1.gif)
